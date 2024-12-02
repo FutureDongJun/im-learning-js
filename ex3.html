@@ -6,8 +6,25 @@
     <title>JS</title>
 </head>
 <body>
-    <script>
-        document.write("Hello".indexOf('l'))
-    </script>
+    <h1>Hello World.</h1>
+    <input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    ">
+    <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    ">
+    <input type="button" value="day" onclick="
+    if(value === 'day') {
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        this.value = 'night';
+    } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        this.value = 'day';
+    }
+    ">
 </body>
 </html>
