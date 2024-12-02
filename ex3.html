@@ -26,5 +26,31 @@
         this.value = 'day';
     }
     ">
+
+    <input id="example" type="button" value="day" onclick="
+    if(document.querySelector('#example').value === 'day') {
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        document.querySelector('#example').value = 'night';
+    } else {
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        document.querySelector('#example').value = 'day';
+    }
+    ">
+
+    <p>리팩토링 : 중복의 제거</p>
+    <input type="button" value="day" onclick="
+    var target = document.querySelector('body');
+    if(this.value === 'day') {
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'night';
+    } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'day';
+    }
+    ">
 </body>
 </html>
